@@ -2,7 +2,9 @@ package versamobileope.versa.com.br.materialdesignlessons.list;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import versamobileope.versa.com.br.materialdesignlessons.R;
@@ -27,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         // create a new view
-        TextView v = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, parent, false);
+        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, parent, false);
         // set the view's size, margins, paddings and layout parameters
 
         ViewHolder vh = new ViewHolder(v);
@@ -39,7 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset[position]);
+        // holder.mTextView.setText(mDataset[position]);
 
     }
 
@@ -54,8 +56,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView mTextView;
-        public ViewHolder(TextView v) {
+        public View mTextView;
+        public ViewHolder(View v) {
             super(v);
             mTextView = v;
         }

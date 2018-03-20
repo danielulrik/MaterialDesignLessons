@@ -27,6 +27,7 @@ public class RecycleCardActivity extends AppCompatActivity {
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(new MyAdapter(new String[]{"Item 1", "Item 2", "Item 3"}));
     }
 
 }
